@@ -7,6 +7,7 @@ This project was bootstrapped with [`create-next-app`](https://github.com/vercel
 ## Running Locally
 
 ```bash
+npm install
 npm run dev
 ```
 
@@ -24,4 +25,6 @@ Open [http://localhost:6000](http://localhost:6006) with your browser.
 
 ```bash
 npm test
+# or
+npm test:watch
 ```
