@@ -7,7 +7,7 @@ interface Props {
 export default function Button({ handleClick, label, testId }: Props) {
   return (
     <button
-      className="w-full h-[48px] px-[40] py-[40] gap-[8px] rounded-[12px] bg-[#3667E9] cursor-pointer"
+      className="w-full h-[48px] px-[40] py-[40] gap-[8px] rounded-[12px] bg-[#3667E9] cursor-pointer text-white"
       data-testid={testId}
       onClick={handleClick}
     >
