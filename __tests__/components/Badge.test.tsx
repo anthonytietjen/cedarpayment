@@ -11,7 +11,7 @@ describe("Badge", () => {
     const ariaLabel = "Step 1";
 
     const { container } = render(
-      <Badge text={text} testId={testId} ariaLabel={ariaLabel} />
+      <Badge text={text} testId={testId} ariaLabel={ariaLabel} primary />
     );
 
     // Renders a <span> html element for semantics
