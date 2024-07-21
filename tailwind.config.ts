@@ -17,6 +17,9 @@ const config: Config = {
       colors: {
         borderGray: "#E7E9EF",
       },
+      fontFamily: {
+        arial: ['Arial', 'sans-serif']
+      }
     },
   },
   plugins: [],
