@@ -14,5 +14,6 @@ export const Default: Story = {
   args: {
     text: "1",
     testId: "badge-1",
+    ariaLabel: "Step 1"
   },
 };
