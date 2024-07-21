@@ -18,7 +18,8 @@ const config: Config = {
         borderGray: "#E7E9EF",
       },
       fontFamily: {
-        arial: ['Arial', 'sans-serif']
+        arial: ['Arial', 'sans-serif'],
+        georgia: ['Georgia', 'serif'],
       }
     },
   },
