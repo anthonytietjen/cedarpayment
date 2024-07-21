@@ -39,8 +39,7 @@ export default function TextField({
     <div className="flex flex-col mb-4" data-testid={testId}>
       <label
         htmlFor={`${testId}-input`}
-        className="mb-2 text-sm font-bold text-gray-700"
-        style={{ fontFamily: "arial" }}
+        className="mb-2 text-sm font-arial font-bold text-gray-700"
         test-id={`${testId}-label`}
       >
         {label}
@@ -50,8 +49,7 @@ export default function TextField({
         <input
           id={`${testId}-input`}
           test-id={`${testId}-input`}
-          className={`w-full h-12 p-3 text-base border ${borderClass} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-[#171731]`}
-          style={{ fontFamily: "arial" }}
+          className={`font-arial w-full h-12 p-3 text-base border ${borderClass} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-[#171731]`}
           type="text"
           aria-label={label}
           aria-invalid={!!error}
@@ -89,7 +87,7 @@ export default function TextField({
         <span
           id={`${testId}-error`}
           test-id={`${testId}-error`}
-          className="mt-2 text-sm text-[#C34648] font-siz"
+          className="font-arial mt-2 text-sm text-[#C34648] font-siz"
         >
           {error}
         </span>
