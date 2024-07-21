@@ -6,9 +6,9 @@ interface Props {
 
 export default function PageLayout({ children }: Props) {
   return (
-    <body className="bg-[#F2F8FF]">
+    <div className="bg-[#F2F8FF] min-h-screen">
       <Header />
       <main>{children}</main>
-    </body>
+    </div>
   );
 }
