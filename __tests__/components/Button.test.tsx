@@ -2,9 +2,10 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import Button from "../../src/app/components/Button";
 import { describe } from "node:test";
+import { axe } from "jest-axe";
 
 describe("Button", () => {
-  it("renders the button", () => {
+  it("renders the button", async () => {
     const labelText = "Hello World";
     const testId = "button-helloworld";
 
@@ -21,5 +22,9 @@ describe("Button", () => {
 
     // Test id is present
     expect(button).toHaveAttribute("data-testid", testId);
+
+    // Accessibility check
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
   });
 });
