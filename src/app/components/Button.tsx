@@ -12,8 +12,7 @@ export default function Button({ handleClick, label, testId }: Props) {
       onClick={handleClick}
     >
       <span
-        className="font-bold text-[16px] leading-[24px] tracking-[0.2px] text-center"
-        style={{ fontFamily: "Arial" }}
+        className="font-arial font-bold text-[16px] leading-[24px] tracking-[0.2px] text-center"
       >
         {label}
       </span>
