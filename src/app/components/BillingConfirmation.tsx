@@ -17,7 +17,7 @@ export default function BillingConfirmation({
   return (
     <>
       <div className="text-[20px] leading-6">
-        You're about to make a payment of{" "}
+        You@apos;re about to make a payment of{" "}
         <span className="font-bold">${paymentAmount.toFixed(2)}</span> dollars.
       </div>
 
