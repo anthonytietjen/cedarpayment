@@ -15,5 +15,12 @@ export const Default: Story = {
     onSubmit(values) {
       console.log(values);
     },
+    initialValues: {
+      cardNumber: "",
+      expires: "",
+      cvv: "",
+      name: "",
+      zip: "",
+    },
   },
 };
