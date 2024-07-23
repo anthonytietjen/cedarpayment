@@ -6,9 +6,12 @@ interface Props {
 
 export default function LoadingSpinner({ testId }: Props) {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <div
+      className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50"
+      aria-modal="true"
+    >
       <div className="bg-white p-8 rounded-lg shadow-lg flex flex-col items-center">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center" aria-live="assertive">
           <svg
             className="animate-spin h-10 w-10 text-blue-500"
             xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +19,7 @@ export default function LoadingSpinner({ testId }: Props) {
             fill="none"
             stroke="currentColor"
             data-testid={testId}
+            aria-label="Loading"
           >
             <circle
               className="opacity-25"
