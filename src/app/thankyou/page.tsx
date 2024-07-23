@@ -11,8 +11,7 @@ export default function Home() {
       <div className="flex flex-col items-center pt-[86px] pb-[40px]">
         <div className="w-full max-w-[376px] flex-col">
           <h1
-            className="text-[28px] mb-[16px] text-center text-[#13126C] font-bold"
-            style={{ fontFamily: "georgia" }}
+            className="text-[28px] mb-[16px] text-center text-[#13126C] font-georgia font-bold"
           >
             Thank you for your payment!
           </h1>
