@@ -6,11 +6,13 @@ import { axe } from "jest-axe";
 
 describe("Button", () => {
   it("renders the button", async () => {
-    const labelText = "Hello World";
+    const buttonText = "Hello World";
     const testId = "button-helloworld";
 
     const { container } = render(
-      <Button handleClick={() => {}} label={labelText} testId={testId} />
+      <Button onClick={() => {}} testId={testId}>
+        {buttonText}
+      </Button>
     );
 
     // Renders a <button> html element for semantics
@@ -18,7 +20,7 @@ describe("Button", () => {
     expect(button).toBeInTheDocument();
 
     // Renders label text
-    expect(button).toHaveTextContent(labelText);
+    expect(button).toHaveTextContent(buttonText);
 
     // Test id is present
     expect(button).toHaveAttribute("data-testid", testId);

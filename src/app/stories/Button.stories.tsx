@@ -12,10 +12,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    handleClick: () => {
+    onClick: () => {
       console.log("clicked");
     },
-    label: "Hello World",
+    children: "Hello World",
     testId: "button-helloworld",
   },
 };
