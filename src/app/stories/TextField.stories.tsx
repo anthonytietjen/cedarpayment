@@ -15,7 +15,8 @@ export const Default: Story = {
     error: "",
     label: "Hello World",
     testId: "button-helloworld",
-    defaultValue: "",
+    value: "Hello World",
+    name: "my-textfield",
   },
 };
 
@@ -24,8 +25,9 @@ export const ValidState: Story = {
     error: "",
     label: "Hello World",
     testId: "button-helloworld",
-    hasBeenFocusedDefaultValue: true,
-    defaultValue: "Valid text entered",
+    touched: true,
+    value: "Valid text entered",
+    name: "my-textfield",
   },
 };
 
@@ -34,6 +36,7 @@ export const ErrorState: Story = {
     error: "Error message here",
     label: "Hello World",
     testId: "button-helloworld",
-    defaultValue: "Invalid text entered",
+    value: "Invalid text entered",
+    name: "my-textfield",
   },
 };

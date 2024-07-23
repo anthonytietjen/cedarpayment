@@ -10,7 +10,12 @@ describe("TextField", () => {
     const testId = "textfield-helloworld";
 
     const { container } = render(
-      <TextField label={labelText} testId={testId} error="" />
+      <TextField
+        label={labelText}
+        testId={testId}
+        error=""
+        name="my-textfield"
+      />
     );
 
     // Renders a <label> html element for semantics
@@ -35,7 +40,8 @@ describe("TextField", () => {
         label={labelText}
         testId={testId}
         error=""
-        hasBeenFocusedDefaultValue={true}
+        touched={true}
+        name="my-textfield"
       />
     );
 
@@ -66,6 +72,8 @@ describe("TextField", () => {
         label={labelText}
         testId={testId}
         error="Error here"
+        touched={true}
+        name="my-textfield"
       />
     );
 

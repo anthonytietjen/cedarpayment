@@ -3,36 +3,27 @@ import Image from "next/image";
 
 interface Props {
   label: string;
-  error: string;
-  defaultValue?: string;
+  error: string | false | undefined;
   testId: string;
+  touched?: boolean | undefined
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  hasBeenFocusedDefaultValue?: boolean;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  name: string;
+  value?: string;
 }
 
 export default function TextField({
   testId,
   label,
   error,
-  defaultValue,
+  touched,
   onChange,
-  hasBeenFocusedDefaultValue,
+  onBlur,
+  onFocus,
+  name,
+  value,
 }: Props) {
-  const [isFocused, setIsFocused] = useState(false);
-  const [hasBeenBlurred, setHasBeenBlurred] = useState(
-    hasBeenFocusedDefaultValue
-  );
-
-  const handleFocus = () => {
-    setIsFocused(true);
-    setHasBeenBlurred(false);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-    setHasBeenBlurred(true);
-  };
-
   const borderClass = error ? "border-[#C34648]" : "border-[#6D7088]";
 
   return (
@@ -49,18 +40,19 @@ export default function TextField({
         <input
           id={`${testId}-input`}
           test-id={`${testId}-input`}
+          name={name}
           className={`font-arial w-full h-12 p-3 text-base border ${borderClass} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-[#171731]`}
           type="text"
           aria-label={label}
           aria-invalid={!!error}
           aria-describedby={error ? `${testId}-error` : undefined}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
+          onFocus={onFocus}
+          onBlur={onBlur}
           onChange={onChange}
-          defaultValue={defaultValue}
+          value={value}
         />
 
-        {hasBeenBlurred && !error && (
+        {touched && !error && (
           <Image
             src="/assets/images/icon-check.svg"
             alt="Valid field indicator"
