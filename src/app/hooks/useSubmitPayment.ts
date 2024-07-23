@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { BillingFormValues } from "../components/BillingForm";
 
 export function useSubmitPayment() {
   const [loading, setLoading] = useState(false);
 
-  const submitPayment = async () => {
+  const submitPayment = async (formValues: BillingFormValues) => {
     setLoading(true);
 
     // Simulate API call
